@@ -17,6 +17,7 @@ class Student {
         std::string getName() const;
         void addGrade(float grade);
         float getAverageGrade() const;
+        void setName(std::string newName);
 };
 
 #endif // !STUDENT_H

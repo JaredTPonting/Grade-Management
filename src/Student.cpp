@@ -10,6 +10,10 @@ std::string Student::getName() const{
     return name;
 }
 
+void Student::setName(std::string newName) {
+    name = newName;
+};
+
 void Student::addGrade(float grade) {
     grades.push_back(grade);
 }
