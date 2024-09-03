@@ -25,3 +25,7 @@ float Student::getAverageGrade() const {
     }
     return grades.empty() ? 0 : sum / grades.size();
 }
+
+std::vector<float> Student::getGrades() const {
+    return grades;
+}

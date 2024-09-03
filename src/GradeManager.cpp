@@ -101,7 +101,16 @@ void GradeManager::loadfromFile(const std::string& filename) {
     std::ifstream inFile(filename);
 
     if (!inFile) {
-        std::cerr << "Error opening file for reading: " << filename << std::endl;
+        std::cerr << "File not found: " << filename << std::endl;
+
+        std::ofstream outFile(filename);
+        if (outFile) {
+            std::cerr << "File created: " << filename << std::endl;
+        } else {
+            std::cerr << "Error creating file: " << filename << std::endl;
+            return;
+        }
+        outFile.close();
         return;
     }
 

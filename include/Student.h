@@ -18,6 +18,7 @@ class Student {
         void addGrade(float grade);
         float getAverageGrade() const;
         void setName(std::string newName);
+        std::vector<float> getGrades() const;
 };
 
 #endif // !STUDENT_H
