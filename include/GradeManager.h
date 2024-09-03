@@ -10,9 +10,10 @@ class GradeManager {
 
     public:
         void addStudent(const Student& student);
+        Student* getStudent(int studentId);
         void updateStudent(int studentId);
-        void displayStudent(int studentId) const;
-        void saveToFile(const std::string& filename) const;
+        void displayStudent(int studentId);
+        void saveToFile(const std::string& filename);
         void loadfromFile(const std::string& filename);
 };
 
