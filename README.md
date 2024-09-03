@@ -24,7 +24,7 @@ This is a simple C++ project designed to manage student grades. The system allow
 
    ```bash
    cd /path/to/your/project
-2. Run the executable 
+2. **Run the executable**
     ```bash
     GradeManager.exe
 ## Notes
