@@ -123,5 +123,20 @@ void GradeManager::loadfromFile(const std::string& filename) {
         std::vector<float> grades;
         inFile >> id;
         inFile.ignore(); // ignore newline after ID
+        std::getline(inFile, name);
+        inFile >> gradeCount;
+
+        grades.resize(gradeCount);
+        for (size_t i=0; i < gradeCount; i++) {
+            inFile >> grades[i];
+        }
+
+        if (inFile) {
+            Student student(id, name);
+            for (float grade: grades){
+                student.addGrade(grade);
+            }
+            students.push_back(student);
+        }
     }
 }
