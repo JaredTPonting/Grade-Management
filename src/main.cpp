@@ -3,13 +3,14 @@
 #include <limits>
 
 void add_student(GradeManager& funcGradeManager) {
-    std::string studentName;
-    std::cout << "Enter New Student name: " << std::endl;
-    std::getline(std::cin, studentName);
-
     int studentID;
     std::cout << "Enter New Student ID: " << std::endl;
     std::cin >> studentID;
+
+    std::string studentName;
+    std::cout << "Enter New Student name: " << std::endl;
+    std::cin.ignore();
+    std::getline(std::cin, studentName);
 
     Student newStudent(studentID, studentName);
     funcGradeManager.addStudent(newStudent);
